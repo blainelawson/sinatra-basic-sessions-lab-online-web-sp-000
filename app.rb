@@ -9,4 +9,10 @@ class App < Sinatra::Base
   get '/' do
     erb :index
   end
+
+  post '/checkout' do
+    @cart = params[:item]
+
+    erb :cart
+  end
 end
