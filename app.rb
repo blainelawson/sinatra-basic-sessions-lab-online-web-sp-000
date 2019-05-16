@@ -14,6 +14,7 @@ class App < Sinatra::Base
     @cart = params[:item]
     @session = session
 binding.pry
+    @session[:item] = params[:item]
     erb :cart
   end
 end
